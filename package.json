@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@next/font": "^13.4.1",
+    "@react-google-maps/api": "^2.18.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "mongoose": "^7.1.0",
@@ -19,6 +20,7 @@
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6",
     "swr": "^2.1.1",
+    "use-places-autocomplete": "^4.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

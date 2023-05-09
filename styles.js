@@ -17,5 +17,6 @@ export default createGlobalStyle`
     font-family: system-ui;
     font-family: ${advent.style.fontFamily};
     font-size: 1.2rem;
+    padding:1rem;
   }
 `;
