@@ -25,6 +25,11 @@ const nextConfig = {
         hostname: "maps.googleapis.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "tourio-58qfouqhw-kutlualptazefidan.vercel.app/",
+        port: "",
+      },
     ],
   },
 };
