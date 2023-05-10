@@ -1,7 +1,7 @@
 import Link from "next/link.js";
 import styled from "styled-components";
 import { StyledImage } from "./StyledImage.js";
-
+import { useState, useEffect } from "react";
 const Article = styled.article`
   border: 5px solid transparent;
   border-radius: 0.8rem;
@@ -44,13 +44,29 @@ const ScreenReaderOnly = styled.span`
   border-width: 0;
 `;
 
+let index = 0;
+
 export default function Card({ name, image, location, id }) {
+  const imagesToDisplay = JSON.parse(image);
+
+  const [singleImage, setSingleImage] = useState(imagesToDisplay[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      index = (index + 1) % imagesToDisplay.length;
+      console.log("image", singleImage, index);
+      setSingleImage(imagesToDisplay[index]);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Article>
       <Figure>
         <ImageContainer>
           <StyledImage
-            src={image}
+            src={singleImage}
             fill
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

@@ -48,17 +48,18 @@ export default function DetailsPage() {
     });
     router.push("/");
   }
+  const imagesToDisplay = JSON.parse(place.image);
 
   return (
     <>
       <Link href={"/"} passHref legacyBehavior>
-        <StyledLink justifySelf="start" position="absolute">
+        <StyledLink justifySelf="start" position="fixed">
           back
         </StyledLink>
       </Link>
       <ImageContainer>
         <StyledImage
-          src={place.image}
+          src={imagesToDisplay[0]}
           priority
           fill
           sizes="(max-width: 768px) 100vw,
