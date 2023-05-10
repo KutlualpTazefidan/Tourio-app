@@ -28,8 +28,8 @@ export const StyledLink = styled.a`
     position &&
     css`
       position: ${position};
-      top: -4rem;
-      left: 0.8rem;
+      top: 1rem;
+      left: 1rem;
       z-index: 1;
     `}
 `;

@@ -7,8 +7,8 @@ import { StyledLink } from "../../../components/StyledLink.js";
 
 const StyledBackLink = styled(StyledLink)`
   justify-self: flex-start;
-  position: absolute;
-  top: -4rem;
+  position: fixed;
+  top: 1rem;
   left: 1rem;
   z-index: 1;
 `;
